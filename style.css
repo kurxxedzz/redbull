@@ -25,14 +25,20 @@ body {
   height: 160px;
   background: linear-gradient(to right, #002654, #004dc9);
   color: #fff;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: auto 1fr;
   align-items: center;
   padding: 0 10px;
 }
 
 .logo {
   height: 130px;
+  justify-self: start;
+}
+
+#links {
+  justify-self: end;
+  text-align: right;
 }
 
 #links a,
@@ -42,6 +48,7 @@ body {
   color: #FFD700;
   text-decoration: none;
   margin-left: 10px;
+  display: inline-block;
 }
 
 #links a:hover {
@@ -90,22 +97,20 @@ body {
 
 @media screen and (max-width: 1024px) {
   #header {
-    flex-direction: column;
+    grid-template-columns: 1fr;
+    text-align: center;
     height: auto;
     padding: 24px 10px;
-    text-align: center;
   }
 
   .logo {
     height: 110px;
     margin-bottom: 14px;
+    justify-self: center;
   }
 
   #links {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 8px;
+    text-align: center;
     margin: 0;
   }
 
@@ -139,7 +144,6 @@ body {
   }
 
   #links a {
-    display: inline-block;
     font-size: 15px;
   }
 
@@ -158,3 +162,4 @@ body {
     box-shadow: 0 0 5px rgba(0,0,0,0.15);
   }
 }
+

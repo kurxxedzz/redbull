@@ -90,3 +90,49 @@ body {
   box-shadow: 0 0 10px rgba(0,0,0,0.2);
   margin-bottom: 10px;
 }
+
+@media screen and (max-width: 768px) {
+  #container {
+    width: 100%;
+    box-shadow: none;
+  }
+
+  #header {
+    flex-direction: column;
+    height: auto;
+    padding: 20px 10px;
+    text-align: center;
+  }
+
+  .logo {
+    height: 100px;
+    margin: 0 auto 10px auto;
+  }
+
+  #links {
+    margin: 10px 0 0 0;
+    text-align: center;
+  }
+
+  #links a {
+    display: inline-block;
+    margin: 5px 8px;
+    font-size: 16px;
+  }
+
+  .contenttext {
+    padding: 15px 20px;
+  }
+
+  .contenttext h2 {
+    font-size: 22px;
+  }
+
+  .evento img,
+  .evento picture img,
+  .evento-img {
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.15);
+  }
+}
